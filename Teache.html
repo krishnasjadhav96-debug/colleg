@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Teacher in College - Faculty</title>
+
+  <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#f4f4f4;
+    }
+
+    header{
+        background:#003366;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    .faculty{
+        width:90%;
+        margin:30px auto;
+    }
+
+    .faculty h2{
+        text-align:center;
+        margin-bottom:30px;
+        color:#003366;
+    }
+
+    .container{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:25px;
+    }
+
+    .card{
+        background:white;
+        width:300px;
+        border-radius:10px;
+        overflow:hidden;
+        box-shadow:0 5px 10px rgba(0,0,0,.2);
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-10px);
+    }
+
+    .card img{
+        width:100%;
+        height:300px;
+        object-fit:cover;
+    }
+
+    .info{
+        padding:20px;
+    }
+
+    .info h3{
+        color:#003366;
+    }
+
+    .info p{
+        margin-top:8px;
+        color:#555;
+    }
+
+    footer{
+        background:#003366;
+        color:white;
+        text-align:center;
+        padding:15px;
+        margin-top:30px;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>College of computer science & it</h1>
+  <p>Meet Our Faculty Members</p>
+</header>
+
+<section class="faculty">
+
+  <h2>Our Teachers</h2>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="images/principal.jpg" alt="Principal">
+      <div class="info">
+        <h3>Dr.Gupta *****</h3>
+        <p><b>Designation:</b> Principal</p>
+        <p><b>Experience:</b> 20 Years</p>
+        <p><b>Email:</b> ******** </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="" alt="Mam">
+      <div class="info">
+        <h3>Prof. Rohini Jadhav </h3>
+        <p><b>Department:</b> Computer Science</p>
+        <p><b>Subject:</b> Java Programming</p>
+        <p><b>Experience:</b> NO Experience</p>
+        <p><b>Email:</b> ********** </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/mam1.jpg" alt="Sir">
+      <div class="info">
+        <h3>Prof. Amol More</h3>
+        <p><b>Department:</b> All sub</p>
+        <p><b>Subject:</b> Web Development,c,c++</p>
+        <p><b>Experience:</b> 200 Years</p>
+        <p><b>Email:</b> ******** </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>© College of computer science & it  | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
