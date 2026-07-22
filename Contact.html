@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Contact</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+        }
+
+        header{
+            background:#003366;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .contact-container{
+            width:90%;
+            max-width:900px;
+            margin:30px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.2);
+        }
+
+        h2{
+            color:#003366;
+            margin-bottom:20px;
+            text-align:center;
+        }
+
+        .contact-info{
+            margin-bottom:30px;
+            line-height:2;
+            font-size:18px;
+        }
+
+        .contact-info span{
+            font-weight:bold;
+        }
+
+        form input,
+        form textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        form textarea{
+            resize:none;
+            height:120px;
+        }
+
+        button{
+            background:#003366;
+            color:white;
+            border:none;
+            padding:12px 25px;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:18px;
+        }
+
+        button:hover{
+            background:#0055aa;
+        }
+
+        footer{
+            background:#003366;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:30px;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h1>College of computer science & it </h1>
+    <p>Contact Us</p>
+</header>
+
+<div class="contact-container">
+
+    <h2>Get in Touch</h2>
+
+    <div class="contact-info">
+        <p><span> Address:</span> College of computer science & it,ambajogai,maharastra</p>
+        <p><span> Phone:</span> +91 **********</p>
+        <p><span> Email:</span> cocsitcollege.com</p>
+        <p><span>Website:</span> www.abccollege.com</p>
+    </div>
+
+    <form id="contactForm" method="post" name="google-sheet">
+        <input type="text" placeholder="Your Name" required name="myname">
+
+        <input type="email" placeholder="Your Email" required name="email">
+
+        <input type="text" id="browser" list="browser-list" placeholder="courses" name="courses">
+
+        <datalist id="browser-list">
+            <option value="BCS">
+            <option value="BCS IT">
+            <option value="BCA">
+        </datalist>
+
+        <textarea placeholder="Write Your Message..." name="message" ></textarea>
+
+        <button type="submit" name="submit">Send Message</button>
+    </form>
+
+</div>
+
+   <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzH3KiW2AiTaIq1VBv-B_cR359nEb-kV6-KitJVrb4eb2HJCN9CcgWLIATquB_bB5bG/exec'
+      const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+         e.preventDefault()
+         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+         .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+         .catch(error => console.error('Error!', error.message))
+     })
+   </script>
+
+
+<footer>
+    © College of computer science & it  | All Rights Reserved
+</footer>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("Thank You! Your message has been sent successfully.");
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
